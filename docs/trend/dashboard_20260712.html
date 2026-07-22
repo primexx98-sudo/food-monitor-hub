@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>건강기능식품 트랜드 - 2026년 07월 12일 (Sun)</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  body { background: #f0f4f8; font-family: 'Malgun Gothic', sans-serif; }
+  .header { background: linear-gradient(135deg, #2d6a4f, #52b788); color: white; padding: 20px 30px; border-radius: 0 0 16px 16px; }
+  .header h1 { font-size: 1.6rem; margin: 0; }
+  .header .date { opacity: 0.85; font-size: 0.95rem; }
+  .card { border: none; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); margin-bottom: 20px; }
+  .card-header { background: #fff; border-bottom: 2px solid #e9ecef; border-radius: 12px 12px 0 0 !important; font-weight: 700; font-size: 1rem; padding: 14px 18px; }
+  .card-header.research { border-bottom-color: #d0ebff; }
+  .card-header.regulatory { border-bottom-color: #fff3bf; }
+  .card-header.overseas { border-bottom-color: #ffe3e3; }
+  .rank { width: 32px; color: #adb5bd; font-weight: 700; }
+  .bar { background: #52b788; height: 18px; border-radius: 4px; min-width: 4px; color: white; font-size: 11px; padding: 1px 4px; }
+  .bar-green { background: #74c69d; }
+  table { width: 100%; }
+  td { padding: 6px 8px; vertical-align: middle; font-size: 0.9rem; }
+  tr:hover { background: #f8f9fa; }
+  .tag { display: inline-block; background: #d8f3dc; color: #1b4332; border-radius: 20px; padding: 4px 12px; margin: 4px; cursor: default; }
+  .rising-tag { display: inline-block; background: #fff3cd; color: #856404; border-radius: 8px; padding: 6px 14px; margin: 4px; font-weight: 600; font-size: 0.9rem; }
+  .news-item { padding: 7px 0; border-bottom: 1px solid #f1f3f5; }
+  .news-item:last-child { border-bottom: none; }
+  .news-item a { color: #2d6a4f; text-decoration: none; font-size: 0.87rem; line-height: 1.4; }
+  .news-item a:hover { text-decoration: underline; }
+  .news-date { display: block; color: #adb5bd; font-size: 0.76rem; margin-top: 2px; }
+  .news-source { color: #868e96; }
+  .section-icon { margin-right: 6px; }
+  .section-label { font-size: 0.7rem; font-weight: 600; padding: 2px 7px; border-radius: 10px; margin-left: 6px; vertical-align: middle; }
+  .label-research { background: #d0ebff; color: #1864ab; }
+  .label-regulatory { background: #fff3bf; color: #7d6608; }
+  .label-overseas { background: #ffe3e3; color: #c92a2a; }
+  .card-source { font-size: 0.7rem; color: #ced4da; border-top: 1px solid #f1f3f5; margin-top: 8px; padding-top: 5px; }
+  .date-select { background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.4); border-radius: 6px; padding: 4px 8px; font-size: 0.85rem; cursor: pointer; }
+  .date-select option { background: #2d6a4f; color: white; }
+</style>
+</head>
+<body>
+<div class="header mb-4">
+  <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+    <h1 class="mb-0">🌿 건강기능식품 트랜드 대시보드</h1>
+    <select id="date-select" class="date-select" title="과거 날짜 조회"></select>
+  </div>
+  <div class="date mt-1">2026년 07월 12일 (Sun) &nbsp;|&nbsp; 매일 오전 9시 자동 업데이트</div>
+</div>
+<div class="container-fluid px-4">
+  <div class="card mb-3">
+    <div class="card-header">⚡ 오늘의 급상승 키워드</div>
+    <div class="card-body py-2">
+      <span class="rising-tag">🔥 nmn 영양제</span><span class="rising-tag">🔥 아연 영양제</span><span class="rising-tag">🔥 비타민 d 하루 섭취량</span><span class="rising-tag">🔥 비타민 먹는 시간</span><span class="rising-tag">🔥 비타민 d 과다</span><span class="rising-tag">🔥 비타민 파트 1</span><span class="rising-tag">🔥 비타민 c 효능</span><span class="rising-tag">🔥 유산균 먹는 시간</span>
+      <div class="card-source">출처: Google Trends 급상승 검색어 (국내 KR, 최근 1일) · 건기식 무관 키워드 자동 제외</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-xl-3">
+      <div class="card">
+        <div class="card-header"><span class="section-icon">📊</span>국내 인기 순위</div>
+        <div class="card-body p-2">
+          <table><tbody><tr><td class="rank">🥇</td><td style="font-weight:700">글루타치온</td><td><div class="bar" style="width:73.33096%;background:#1b4332">73</div></td></tr><tr><td class="rank">🥈</td><td style="font-weight:700">오메가3</td><td><div class="bar" style="width:71.30197%;background:#2d6a4f">71</div></td></tr><tr><td class="rank">🥉</td><td style="font-weight:700">크레아틴</td><td><div class="bar" style="width:69.17613%;background:#40916c">69</div></td></tr><tr><td class="rank">4</td><td style="font-weight:400">마그네슘</td><td><div class="bar" style="width:59.91561%;background:#52b788">60</div></td></tr><tr><td class="rank">5</td><td style="font-weight:400">비오틴</td><td><div class="bar" style="width:34.76562%;background:#74c69d">35</div></td></tr><tr><td class="rank">6</td><td style="font-weight:400">단백질보충제</td><td><div class="bar" style="width:34.12642%;background:#74c69d">34</div></td></tr><tr><td class="rank">7</td><td style="font-weight:400">유산균</td><td><div class="bar" style="width:33.85139%;background:#74c69d">34</div></td></tr><tr><td class="rank">8</td><td style="font-weight:400">엽산</td><td><div class="bar" style="width:28.48011%;background:#74c69d">28</div></td></tr><tr><td class="rank">9</td><td style="font-weight:400">콜라겐</td><td><div class="bar" style="width:23.65371%;background:#74c69d">24</div></td></tr><tr><td class="rank">10</td><td style="font-weight:400">코엔자임Q10</td><td><div class="bar" style="width:22.94652%;background:#74c69d">23</div></td></tr><tr><td class="rank">11</td><td style="font-weight:400">루테인</td><td><div class="bar" style="width:16.68996%;background:#74c69d">17</div></td></tr><tr><td class="rank">12</td><td style="font-weight:400">프로바이오틱스</td><td><div class="bar" style="width:14.3904%;background:#74c69d">14</div></td></tr><tr><td class="rank">13</td><td style="font-weight:400">비타민</td><td><div class="bar" style="width:14.28766%;background:#74c69d">14</div></td></tr><tr><td class="rank">14</td><td style="font-weight:400">아연</td><td><div class="bar" style="width:12.08083%;background:#74c69d">12</div></td></tr><tr><td class="rank">15</td><td style="font-weight:400">홍삼</td><td><div class="bar" style="width:8.57532%;background:#74c69d">9</div></td></tr></tbody></table>
+          <div class="card-source">산출기준: 네이버 데이터랩 검색량 지수 (최근 7일, 건강기능식품 주요 키워드 비교)</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+      <div class="card">
+        <div class="card-header"><span class="section-icon">🌍</span>글로벌 트랜드</div>
+        <div class="card-body p-2">
+          <table><tbody><tr><td class="rank">1</td><td>magnesium</td><td><div class="bar bar-green" style="width:67%">67</div></td></tr><tr><td class="rank">2</td><td>collagen</td><td><div class="bar bar-green" style="width:48%">48</div></td></tr><tr><td class="rank">3</td><td>omega 3</td><td><div class="bar bar-green" style="width:27%">27</div></td></tr><tr><td class="rank">4</td><td>probiotic</td><td><div class="bar bar-green" style="width:15%">15</div></td></tr><tr><td class="rank">5</td><td>vitamin supplement</td><td><div class="bar bar-green" style="width:3%">3</div></td></tr></tbody></table>
+          <div class="card-source">출처: Google Trends (최근 7일, 글로벌)</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+      <div class="card">
+        <div class="card-header"><span class="section-icon">💬</span>SNS 화제 키워드</div>
+        <div class="card-body">
+          <span class="tag" style="font-size:22px">#비타민 <small>11</small></span><span class="tag" style="font-size:22px">#글루타치온 <small>11</small></span><span class="tag" style="font-size:22px">#유산균 <small>10</small></span><span class="tag" style="font-size:22px">#오메가3 <small>10</small></span><span class="tag" style="font-size:22px">#콜라겐 <small>10</small></span><span class="tag" style="font-size:22px">#홍삼 <small>10</small></span><span class="tag" style="font-size:22px">#프로바이오틱스 <small>10</small></span><span class="tag" style="font-size:22px">#마그네슘 <small>10</small></span><span class="tag" style="font-size:22px">#아연 <small>10</small></span><span class="tag" style="font-size:22px">#철분 <small>10</small></span><span class="tag" style="font-size:22px">#칼슘 <small>10</small></span><span class="tag" style="font-size:22px">#루테인 <small>10</small></span><span class="tag" style="font-size:22px">#밀크시슬 <small>10</small></span><span class="tag" style="font-size:22px">#가르시니아 <small>10</small></span><span class="tag" style="font-size:22px">#NAD <small>10</small></span><span class="tag" style="font-size:22px">#코엔자임Q10 <small>10</small></span><span class="tag" style="font-size:22px">#비오틴 <small>10</small></span><span class="tag" style="font-size:22px">#엽산 <small>10</small></span><span class="tag" style="font-size:22px">#크레아틴 <small>10</small></span><span class="tag" style="font-size:22px">#단백질보충제 <small>10</small></span>
+          <div class="card-source">출처: 네이버 트랜드 데이터</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+      <div class="card">
+        <div class="card-header"><span class="section-icon">📰</span>국내 뉴스</div>
+        <div class="card-body p-2">
+          <div class="news-item"><a href="https://health.chosun.com/site/data/html_dir/2026/07/10/2026071001507.html" target="_blank">“신진대사 원활하게 도와” 소유가 반했다는 ‘이혈테라피’, 방법은?</a><span class="news-date">헬스조선 · </span></div><div class="news-item"><a href="https://health.chosun.com/site/data/html_dir/2026/07/10/2026071001277.html" target="_blank">혈당 관리 땐 ‘에어컨 바람’ 조심… 왜?</a><span class="news-date">헬스조선 · </span></div><div class="news-item"><a href="https://health.chosun.com/site/data/html_dir/2026/07/10/2026071001828.html" target="_blank">아침 ‘공복혈당’ 관리에 중요… 나이 불문 꼭 지켜야 할 4가지</a><span class="news-date">헬스조선 · </span></div><div class="news-item"><a href="https://health.chosun.com/site/data/html_dir/2026/07/10/2026071001937.html" target="_blank">‘23kg 감량’ 40대 남성, 거의 모든 음식에 ‘이것’ 넣었다는데?</a><span class="news-date">헬스조선 · </span></div><div class="news-item"><a href="https://health.chosun.com/site/data/html_dir/2026/07/10/2026071001952.html" target="_blank">‘최애 토핑’ 꼽아보자… 빙수, 건강 지키며 맛있게 먹는 방법</a><span class="news-date">헬스조선 · </span></div><div class="news-item"><a href="https://health.chosun.com/site/data/html_dir/2026/07/10/2026071002040.html" target="_blank">"콜레스테롤 낮추고 혈관 확장" 양파 영양 온전히 살리는 조리법 4</a><span class="news-date">헬스조선 · </span></div><div class="news-item"><a href="https://www.thinkfood.co.kr/news/articleView.html?idxno=200690" target="_blank">휴가 전 몸매 잡기…식품업계, 건강 입은 먹거리로 승부</a><span class="news-date">식품음료신문 · 2026-07-07 07:52</span></div><div class="news-item"><a href="https://www.pharmnews.com/news/articleView.html?idxno=304825" target="_blank">영진약품, 흡수율 특화 '리포좀 비타민C 맥스 5000' 발매</a><span class="news-date">팜뉴스 · 2026-07-10 10:00</span></div>
+          <div class="card-source">출처: 연합뉴스·헬스조선·식품음료신문·히트뉴스 RSS · 네이버 뉴스 API</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header research">
+          <span class="section-icon">🔬</span>연구·임상 동향
+          <span class="section-label label-research">Research</span>
+        </div>
+        <div class="card-body p-2">
+          <div class="news-item"><a href="https://www.yna.co.kr/view/AKR20260710130200063" target="_blank">🔬 KAIST, 집에서 뇌혈관질환 위험 신호 미리 찾는 AI 기술 개발</a><span class="news-date">연합뉴스 건강 · Sun, 12 Jul 2026</span></div><div class="news-item"><a href="https://health.chosun.com/site/data/html_dir/2026/07/10/2026071001727.html" target="_blank">🔬 혈관·눈·콩팥도 문제지만… 고혈당, 청력도 저해한다</a><span class="news-date">헬스조선 · </span></div><div class="news-item"><a href="https://health.chosun.com/site/data/html_dir/2026/07/10/2026071002116.html" target="_blank">🔬 “혈당 잡고 혈관 깨끗하게” 6개월 꾸준히 먹으면 건강 달라지는 채소, 뭐지?</a><span class="news-date">헬스조선 · </span></div><div class="news-item"><a href="https://health.chosun.com/site/data/html_dir/2026/07/10/2026071001617.html" target="_blank">🔬 암 조기 진단 중요한데… 남성이 여성보다 발견 늦는 이유</a><span class="news-date">헬스조선 · </span></div><div class="news-item"><a href="https://health.chosun.com/site/data/html_dir/2026/07/10/2026071002309.html" target="_blank">🔬 식사 후 마시면 ‘좋은 음료’ vs ‘안 좋은 음료’</a><span class="news-date">헬스조선 · </span></div><div class="news-item"><a href="https://health.chosun.com/site/data/html_dir/2026/07/10/2026071001715.html" target="_blank">🔬 ‘알람 열 개’ 맞추는 사람이 더 피곤한 이유</a><span class="news-date">헬스조선 · </span></div><div class="news-item"><a href="https://health.chosun.com/site/data/html_dir/2026/07/10/2026071002098.html" target="_blank">🔬 “공복에 꼭 먹어라”… 22kg 감량 심진화가 챙겨 다니는 음식</a><span class="news-date">헬스조선 · </span></div><div class="news-item"><a href="https://health.chosun.com/site/data/html_dir/2026/07/10/2026071002214.html" target="_blank">🔬 ‘사는 지역’ 따라 췌장암 발병 달랐다… 위험한 곳은？</a><span class="news-date">헬스조선 · </span></div>
+          <div class="card-source">출처: 네이버 뉴스 API (연구·임상 키워드 검색)</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header regulatory">
+          <span class="section-icon">🏛</span>식약처·규제 동향
+          <span class="section-label label-regulatory">Regulatory</span>
+        </div>
+        <div class="card-body p-2">
+          <div class="news-item"><a href="https://www.thinkfood.co.kr/news/articleView.html?idxno=200727" target="_blank">🏛 [07/07 오늘의 새상품] hy ‘바이오리브 면역 유산균’, 대상 청정원 ‘리치 크림카레’, CJ웰케어 ‘바이오코어 바나나효소’, 일동후디스 ‘하이뮨 아미노포텐 이뮨비타’, 컴포즈커피 ‘저당 복숭아 스무디’ 등 4종</a><span class="news-date">식품음료신문 · 2026-07-07 09:23</span></div>
+          <div class="card-source">출처: 네이버 뉴스 API (식약처·규제·고시 키워드 검색)</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header overseas">
+          <span class="section-icon">🌐</span>해외 업계 동향
+          <span class="section-label label-overseas">Global</span>
+        </div>
+        <div class="card-body p-2">
+          <div class="news-item"><a href="https://www.nutraceuticalsworld.com/building-stronger-supply-chains-through-global-reach-and-personal-service/" target="_blank">글로벌 범위와 개인 맞춤 서비스를 통한 더 강력한 공급망 구축</a><span class="news-date news-source">[Nutraceuticals World] Mon, 29 Jun 2026</span></div><div class="news-item"><a href="https://www.sciencedaily.com/releases/2026/07/260708022206.htm" target="_blank">과학자들은 쥐가 더 많이 먹고 지방을 줄이는 데 도움이 되는 장수 식단을 발견했다</a><span class="news-date news-source">[ScienceDaily — Dietary Supplements] Thu, 09 Jul 2026</span></div><div class="news-item"><a href="https://www.sciencedaily.com/releases/2026/07/260707054114.htm" target="_blank">과학자들은 기생충이 없이는 살 수 없는 유익한 한 가지 영양소를 발견했다</a><span class="news-date news-source">[ScienceDaily — Dietary Supplements] Fri, 10 Jul 2026</span></div><div class="news-item"><a href="https://www.sciencedaily.com/releases/2026/06/260626030428.htm" target="_blank">과학자들은 비타민 C와 뇌 건강 사이의 놀라운 연관성을 발견했습니다</a><span class="news-date news-source">[ScienceDaily — Dietary Supplements] Wed, 01 Jul 2026</span></div><div class="news-item"><a href="https://www.sciencedaily.com/releases/2026/06/260622014300.htm" target="_blank">수백만 명이 뇌 건강을 위해 오메가-3 생선 기름을 섭취하지만, 새로운 연구에서는 효과가 없다는 결과를 발견했다</a><span class="news-date news-source">[ScienceDaily — Dietary Supplements] Mon, 29 Jun 2026</span></div><div class="news-item"><a href="https://www.sciencedaily.com/releases/2026/07/260708022214.htm" target="_blank">비타민 A 발견이 과학자들이 시력에 대해 아는 것을 바꾸고 있습니다</a><span class="news-date news-source">[ScienceDaily — Nutrition] Thu, 09 Jul 2026</span></div><div class="news-item"><a href="https://www.sciencedaily.com/releases/2026/07/260701015247.htm" target="_blank">다이어트를 잘 지키지 못하나요? 체중 감량을 위해 칼로리를 세는 것보다 단식이 더 쉬울 수 있습니다</a><span class="news-date news-source">[ScienceDaily — Nutrition] Wed, 08 Jul 2026</span></div><div class="news-item"><a href="https://www.sciencedaily.com/releases/2026/06/260624115324.htm" target="_blank">과학자들이 지방을 태우고 새로운 지방 세포 생성을 차단하는 단백질 스위치를 발견하다</a><span class="news-date news-source">[ScienceDaily — Nutrition] Thu, 02 Jul 2026</span></div>
+          <div class="card-source">출처: ScienceDaily RSS · Nutraceuticals World RSS (자동 번역)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header"><span class="section-icon">📈</span>국내 Top 7 키워드 검색량 비교</div>
+    <div class="card-body">
+      <canvas id="trendChart" height="80"></canvas>
+      <div class="card-source">출처: 네이버 데이터랩 검색 트랜드 API (최근 7일 평균)</div>
+    </div>
+  </div>
+</div>
+<script>
+const ctx = document.getElementById('trendChart').getContext('2d');
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ["\uae00\ub8e8\ud0c0\uce58\uc628", "\uc624\uba54\uac003", "\ud06c\ub808\uc544\ud2f4", "\ub9c8\uadf8\ub124\uc298", "\ube44\uc624\ud2f4", "\ub2e8\ubc31\uc9c8\ubcf4\ucda9\uc81c", "\uc720\uc0b0\uade0"],
+    datasets: [{
+      label: '검색 지수',
+      data: [73.33096, 71.30197, 69.17613, 59.91561, 34.76562, 34.12642, 33.85139],
+      backgroundColor: 'rgba(82, 183, 136, 0.7)',
+      borderColor: '#2d6a4f',
+      borderWidth: 1,
+      borderRadius: 6
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: { y: { beginAtZero: true } }
+  }
+});
+</script>
+<script>
+(function(){
+  var sel = document.getElementById('date-select');
+  if (!sel) return;
+  sel.onchange = function(){ location.href = this.value; };
+  fetch('./history.json?v=' + Date.now())
+    .then(function(r){ return r.json(); })
+    .then(function(dates){
+      var cur = (location.pathname.match(/dashboard_(\d{8})\.html/) || [])[1];
+      dates.forEach(function(d, i){
+        var opt = document.createElement('option');
+        var label = d.slice(0,4)+'-'+d.slice(4,6)+'-'+d.slice(6,8);
+        opt.value = i === 0 ? './index.html' : ('./dashboard_'+d+'.html');
+        opt.text  = i === 0 ? label+' (오늘)' : label;
+        sel.appendChild(opt);
+      });
+      sel.value = cur ? ('./dashboard_'+cur+'.html') : './index.html';
+    })
+    .catch(function(){});
+})();
+</script>
+</body>
+</html>
