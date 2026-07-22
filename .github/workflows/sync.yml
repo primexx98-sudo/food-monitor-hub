@@ -1,0 +1,42 @@
+name: 대시보드 동기화
+
+on:
+  schedule:
+    - cron: '20 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+
+      - name: health-trend 결과물 복사
+        run: |
+          git clone --depth 1 https://github.com/primexx98-sudo/health-trend.git /tmp/health-trend
+          rm -rf docs/trend
+          mkdir -p docs/trend
+          cp -r /tmp/health-trend/docs/. docs/trend/
+
+      - name: FOODLAW-MONITORING 결과물 복사
+        run: |
+          git clone --depth 1 https://github.com/primexx98-sudo/FOODLAW-MONITORING.git /tmp/foodlaw
+          rm -rf docs/law
+          mkdir -p docs/law
+          cp -r /tmp/foodlaw/docs/. docs/law/
+
+      - name: 공용 네비게이션 바 삽입
+        run: python scripts/inject_nav.py
+
+      - name: 변경사항 커밋 & 푸시
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/trend docs/law
+          git diff --cached --quiet || git commit -m "sync: 대시보드 동기화 $(date +'%Y-%m-%d')"
+          git push
