@@ -1,18 +1,21 @@
-"""docs/trend/index.html, docs/law/index.html에 공용 네비게이션 바를 삽입합니다."""
+"""docs/trend/(index.html + dashboard_*.html), docs/law/index.html에 공용 네비게이션 바를 삽입합니다."""
 
+import glob
 import os
 
 REPO_ROOT = os.path.join(os.path.dirname(__file__), "..")
 NAV_PATH = os.path.join(REPO_ROOT, "docs", "nav_snippet.html")
-TARGETS = [
-    os.path.join(REPO_ROOT, "docs", "trend", "index.html"),
-    os.path.join(REPO_ROOT, "docs", "law", "index.html"),
-]
 
-NAV_ACTIVE_KEYS = {
-    os.path.join(REPO_ROOT, "docs", "trend", "index.html"): "trend",
-    os.path.join(REPO_ROOT, "docs", "law", "index.html"): "law",
-}
+TRENDS_DIR = os.path.join(REPO_ROOT, "docs", "trend")
+TREND_TARGETS = [os.path.join(TRENDS_DIR, "index.html")] + glob.glob(
+    os.path.join(TRENDS_DIR, "dashboard_*.html")
+)
+LAW_TARGETS = [os.path.join(REPO_ROOT, "docs", "law", "index.html")]
+
+TARGETS = TREND_TARGETS + LAW_TARGETS
+
+NAV_ACTIVE_KEYS = {path: "trend" for path in TREND_TARGETS}
+NAV_ACTIVE_KEYS.update({path: "law" for path in LAW_TARGETS})
 
 
 def build_nav(active_key):
