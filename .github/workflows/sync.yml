@@ -2,7 +2,7 @@ name: 대시보드 동기화
 
 on:
   schedule:
-    - cron: '20 0 * * *'
+    - cron: '47 0 * * *'  # 00:47 UTC = 09:47 KST (health-trend 09:13 수집 이후 충분한 여유, 정각 지연 회피)
   workflow_dispatch:
 
 permissions:
