@@ -32,6 +32,10 @@ jobs:
           rm -rf docs/law
           mkdir -p docs/law
           cp -r /tmp/foodlaw/docs/. docs/law/
+          rm -rf docs/law/statute  # FOODLAW-MONITORING docs/ 안에 statute/가 같이 있어 통째 복사 시 중복됨 — law 쪽에서는 제거
+          rm -rf docs/statute
+          mkdir -p docs/statute
+          cp -r /tmp/foodlaw/docs/statute/. docs/statute/
 
       - name: 공용 네비게이션 바 삽입
         run: python scripts/inject_nav.py
@@ -40,6 +44,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/trend docs/law
+          git add docs/trend docs/law docs/statute
           git diff --cached --quiet || git commit -m "sync: 대시보드 동기화 $(date +'%Y-%m-%d')"
           git push

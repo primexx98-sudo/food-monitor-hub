@@ -11,11 +11,13 @@ TREND_TARGETS = [os.path.join(TRENDS_DIR, "index.html")] + glob.glob(
     os.path.join(TRENDS_DIR, "dashboard_*.html")
 )
 LAW_TARGETS = [os.path.join(REPO_ROOT, "docs", "law", "index.html")]
+STATUTE_TARGETS = [os.path.join(REPO_ROOT, "docs", "statute", "index.html")]
 
-TARGETS = TREND_TARGETS + LAW_TARGETS
+TARGETS = TREND_TARGETS + LAW_TARGETS + STATUTE_TARGETS
 
 NAV_ACTIVE_KEYS = {path: "trend" for path in TREND_TARGETS}
 NAV_ACTIVE_KEYS.update({path: "law" for path in LAW_TARGETS})
+NAV_ACTIVE_KEYS.update({path: "statute" for path in STATUTE_TARGETS})
 
 
 def build_nav(active_key):
