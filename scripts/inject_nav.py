@@ -24,9 +24,12 @@ def build_nav(active_key):
     with open(NAV_PATH, encoding="utf-8") as f:
         nav_html = f.read()
     marker = f'data-hub-key="{active_key}"'
+    # 2026-09-10: padding/text-decoration은 nav_snippet.html의 공용 클래스(#hub-nav a)로
+    # 이관됨(모바일 반응형 padding 적용을 위해) — 여기서는 활성 탭에서만 달라지는
+    # 속성(색상/굵기/밑줄)만 인라인으로 덧붙인다.
     active_style = 'color:#fff;font-weight:700;border-bottom:2px solid #52b788;'
     return nav_html.replace(
-        marker, f'{marker} style="padding:10px 18px;text-decoration:none;{active_style}"'
+        marker, f'{marker} style="{active_style}"'
     )
 
 
